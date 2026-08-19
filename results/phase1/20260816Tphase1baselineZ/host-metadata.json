@@ -1,0 +1,15 @@
+﻿{
+    "captured_utc":  "2026-08-16T15:27:15.5313640Z",
+    "computer_name":  "UMIT",
+    "manufacturer":  "Acer",
+    "model":  "Nitro AN517-54",
+    "cpu":  "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+    "physical_cores":  8,
+    "logical_processors":  16,
+    "memory_bytes":  34111545344,
+    "os":  "Microsoft Windows 11 Pro",
+    "os_version":  "10.0.26200",
+    "docker_version":  "29.4.2",
+    "docker_image":  "lkk-hsat-phase1:locked",
+    "docker_image_id":  "sha256:5cfc3c4365e06524f75db57b13652c8876d3cd5e9cc26732d0cf9e0811aba68e"
+}

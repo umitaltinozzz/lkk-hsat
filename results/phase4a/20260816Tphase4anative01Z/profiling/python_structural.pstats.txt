@@ -1,0 +1,88 @@
+         28267556 function calls (28263278 primitive calls) in 9.295 seconds
+
+   Ordered by: cumulative time
+   List reduced from 244 to 80 due to restriction <80>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       14    1.435    0.103    8.200    0.586 structure.py:133(recover_exact_registry)
+   613087    0.428    0.000    3.945    0.000 cnf.py:216(combinations_as_clauses)
+   645512    1.003    0.000    3.719    0.000 cnf.py:18(canonical_clause)
+1088222/1084288    0.966    0.000    1.915    0.000 {built-in method builtins.sorted}
+   508543    0.300    0.000    1.170    0.000 {built-in method builtins.all}
+  2490899    0.662    0.000    0.952    0.000 cnf.py:19(<genexpr>)
+   350614    0.206    0.000    0.951    0.000 structure.py:245(<genexpr>)
+  2481965    0.740    0.000    0.740    0.000 structure.py:238(<genexpr>)
+   645626    0.357    0.000    0.710    0.000 {built-in method builtins.any}
+  1845387    0.412    0.000    0.523    0.000 cnf.py:24(<lambda>)
+   762778    0.327    0.000    0.438    0.000 structure.py:163(<setcomp>)
+       20    0.127    0.006    0.419    0.021 cnf.py:44(parse_cnf)
+  2490899    0.351    0.000    0.351    0.000 cnf.py:22(<genexpr>)
+  5447638    0.307    0.000    0.307    0.000 {built-in method builtins.abs}
+  2327292    0.290    0.000    0.290    0.000 cnf.py:218(<genexpr>)
+       14    0.137    0.010    0.289    0.021 structure.py:53(fast_cheap_gate)
+       14    0.154    0.011    0.251    0.018 cnf.py:117(bounded_resolution)
+   966106    0.196    0.000    0.248    0.000 structure.py:246(<lambda>)
+        6    0.002    0.000    0.204    0.034 witness.py:126(check_witness)
+  1313034    0.127    0.000    0.127    0.000 structure.py:246(<genexpr>)
+       52    0.000    0.000    0.090    0.002 pathlib.py:1037(open)
+       52    0.089    0.002    0.090    0.002 {built-in method io.open}
+   551642    0.085    0.000    0.085    0.000 structure.py:182(<genexpr>)
+   547785    0.081    0.000    0.081    0.000 structure.py:183(<genexpr>)
+  1076129    0.067    0.000    0.067    0.000 {built-in method builtins.len}
+   350614    0.052    0.000    0.052    0.000 structure.py:249(<genexpr>)
+   216269    0.039    0.000    0.050    0.000 structure.py:76(<lambda>)
+   350614    0.049    0.000    0.049    0.000 structure.py:250(<genexpr>)
+       20    0.000    0.000    0.048    0.002 cnf.py:27(sha256_file)
+        6    0.010    0.002    0.043    0.007 witness.py:86(_rebuild_clause_database)
+       14    0.015    0.001    0.036    0.003 structure.py:149(<listcomp>)
+       14    0.020    0.001    0.034    0.002 structure.py:148(<listcomp>)
+     4143    0.029    0.000    0.029    0.000 {method 'index' of 'list' objects}
+       53    0.028    0.001    0.028    0.001 {method '__exit__' of '_io._IOBase' objects}
+        6    0.000    0.000    0.026    0.004 pathlib.py:1071(write_text)
+       43    0.001    0.000    0.023    0.001 witness.py:173(<setcomp>)
+    31153    0.023    0.000    0.023    0.000 structure.py:227(<setcomp>)
+   257020    0.017    0.000    0.017    0.000 {method 'append' of 'list' objects}
+        6    0.000    0.000    0.015    0.002 pathlib.py:1054(read_text)
+        6    0.000    0.000    0.014    0.002 __init__.py:183(dumps)
+        6    0.000    0.000    0.014    0.002 encoder.py:183(encode)
+        6    0.014    0.002    0.014    0.002 encoder.py:205(iterencode)
+   156911    0.013    0.000    0.013    0.000 {method 'setdefault' of 'dict' objects}
+     7328    0.013    0.000    0.013    0.000 {method 'issubset' of 'frozenset' objects}
+   159784    0.012    0.000    0.012    0.000 {method 'get' of 'dict' objects}
+       41    0.011    0.000    0.011    0.000 {method 'read' of '_io.BufferedReader' objects}
+       40    0.000    0.000    0.011    0.000 cnf.py:30(<lambda>)
+    73176    0.010    0.000    0.010    0.000 {method 'startswith' of 'str' objects}
+    93127    0.009    0.000    0.009    0.000 structure.py:64(<genexpr>)
+    99408    0.008    0.000    0.008    0.000 structure.py:149(<genexpr>)
+       54    0.000    0.000    0.008    0.000 witness.py:155(<setcomp>)
+    69628    0.007    0.000    0.007    0.000 structure.py:62(<genexpr>)
+        6    0.000    0.000    0.007    0.001 __init__.py:299(loads)
+        6    0.000    0.000    0.007    0.001 decoder.py:332(decode)
+        6    0.007    0.001    0.007    0.001 decoder.py:343(raw_decode)
+    73503    0.006    0.000    0.006    0.000 structure.py:148(<genexpr>)
+    24725    0.005    0.000    0.006    0.000 structure.py:215(<genexpr>)
+    36526    0.006    0.000    0.006    0.000 {method 'split' of 'str' objects}
+        6    0.000    0.000    0.005    0.001 witness.py:24(create_witness)
+        6    0.005    0.001    0.005    0.001 {method 'read' of '_io.TextIOWrapper' objects}
+        6    0.004    0.001    0.004    0.001 {method 'write' of '_io.TextIOWrapper' objects}
+       14    0.000    0.000    0.004    0.000 cnf.py:112(clause_to_id)
+        6    0.004    0.001    0.004    0.001 witness.py:37(<listcomp>)
+       14    0.004    0.000    0.004    0.000 cnf.py:114(<dictcomp>)
+    32397    0.004    0.000    0.004    0.000 {built-in method time.perf_counter_ns}
+    36760    0.004    0.000    0.004    0.000 {method 'strip' of 'str' objects}
+        6    0.000    0.000    0.003    0.000 flow.py:100(flow_box_test)
+     6659    0.002    0.000    0.002    0.000 structure.py:218(<setcomp>)
+     3934    0.001    0.000    0.002    0.000 structure.py:222(<lambda>)
+        6    0.000    0.000    0.001    0.000 flow.py:50(max_flow)
+       62    0.000    0.000    0.001    0.000 {built-in method builtins.sum}
+     1750    0.001    0.000    0.001    0.000 cnf.py:179(<setcomp>)
+     1191    0.001    0.000    0.001    0.000 structure.py:155(<setcomp>)
+    11455    0.001    0.000    0.001    0.000 {method 'add' of 'set' objects}
+   403/59    0.001    0.000    0.001    0.000 flow.py:67(send)
+     4981    0.001    0.000    0.001    0.000 structure.py:80(<genexpr>)
+       34    0.000    0.000    0.001    0.000 pathlib.py:766(__truediv__)
+       34    0.000    0.000    0.001    0.000 pathlib.py:531(_make_child)
+        1    0.000    0.000    0.001    0.001 __init__.py:71(search_function)
+      470    0.001    0.000    0.001    0.000 flow.py:43(add_edge)
+
+

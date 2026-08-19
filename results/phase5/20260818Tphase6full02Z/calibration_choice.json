@@ -1,0 +1,30 @@
+{
+  "chosen_timeout_seconds": 60.0,
+  "grid": [
+    {
+      "timeout_s": 5.0,
+      "runs": 320,
+      "solved": 207,
+      "solved_fraction": 0.646875
+    },
+    {
+      "timeout_s": 15.0,
+      "runs": 320,
+      "solved": 214,
+      "solved_fraction": 0.66875
+    },
+    {
+      "timeout_s": 30.0,
+      "runs": 320,
+      "solved": 223,
+      "solved_fraction": 0.696875
+    },
+    {
+      "timeout_s": 60.0,
+      "runs": 320,
+      "solved": 234,
+      "solved_fraction": 0.73125
+    }
+  ],
+  "rule": "smallest timeout within 2 points of the best solved fraction"
+}

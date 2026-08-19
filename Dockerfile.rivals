@@ -1,0 +1,26 @@
+# Established techniques that are known to target the families Phase 4C wins on.
+# Built separately from the locked solver image so nothing here can affect the
+# pinned CaDiCaL/Kissat baselines.
+#
+#   BreakID      static symmetry breaking; pigeonhole is the canonical symmetric
+#                instance, so this is the first thing a reviewer will ask about.
+#   RoundingSat  cutting-plane / pseudo-Boolean reasoning, which refutes
+#                pigeonhole in polynomial time rather than exponential.
+FROM debian@sha256:abd67ffcfa541b485a3dff59865ab629aa048a6c613e639d36e7456b0b229241 AS builder
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential cmake git ca-certificates zlib1g-dev libgmp-dev libboost-all-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# BreakID
+RUN git clone --depth 1 https://github.com/meelgroup/breakid.git /src/breakid \
+ && cd /src/breakid && mkdir -p build && cd build \
+ && cmake .. -DCMAKE_BUILD_TYPE=Release -DSTATICCOMPILE=ON \
+ && make -j"$(nproc)" \
+ && mkdir -p /opt/breakid-libs \
+ && (find . -name 'breakid' -type f -perm -u+x -exec cp {} /opt/breakid \; ) \
+ && (find . -name 'libbreakid*' -exec cp {} /opt/breakid-libs/ \; || true)
+
+FROM lkk-hsat-phase4c:native
+COPY --from=builder /opt/breakid /opt/solvers/bin/breakid
+COPY --from=builder /opt/breakid-libs/ /usr/local/lib/
+RUN ldconfig || true

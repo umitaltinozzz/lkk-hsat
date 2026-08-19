@@ -1,0 +1,46 @@
+# Debian image resolved on 2026-08-16. The digest makes the build base immutable.
+FROM debian@sha256:abd67ffcfa541b485a3dff59865ab629aa048a6c613e639d36e7456b0b229241 AS builder
+
+ARG DEBIAN_FRONTEND=noninteractive
+ARG CADICAL_COMMIT=c60730422e758ef1cebe7aeddf2dda31c996bf04
+ARG KISSAT_COMMIT=8af8e56f174b778aef3aa45af9f739b2a5f492c2
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends build-essential ca-certificates git \
+ && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /src
+RUN git clone https://github.com/arminbiere/cadical.git \
+ && cd cadical \
+ && git checkout --detach "$CADICAL_COMMIT" \
+ && test "$(git rev-parse HEAD)" = "$CADICAL_COMMIT" \
+ && ./configure -static \
+ && make -j"$(nproc)" cadical
+
+RUN git clone https://github.com/arminbiere/kissat.git \
+ && cd kissat \
+ && git checkout --detach "$KISSAT_COMMIT" \
+ && test "$(git rev-parse HEAD)" = "$KISSAT_COMMIT" \
+ && ./configure -static \
+ && make -j"$(nproc)" kissat
+
+RUN mkdir -p /opt/solvers/bin \
+ && cp /src/cadical/build/cadical /opt/solvers/bin/cadical \
+ && cp /src/kissat/build/kissat /opt/solvers/bin/kissat \
+ && { \
+      printf 'cadical_commit=%s\n' "$(git -C /src/cadical rev-parse HEAD)"; \
+      printf 'kissat_commit=%s\n' "$(git -C /src/kissat rev-parse HEAD)"; \
+      gcc --version | head -n 1; \
+      make --version | head -n 1; \
+    } > /opt/solvers/BUILD-METADATA.txt
+
+FROM debian@sha256:abd67ffcfa541b485a3dff59865ab629aa048a6c613e639d36e7456b0b229241
+
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends ca-certificates python3 time \
+ && rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /opt/solvers /opt/solvers
+WORKDIR /work
+ENTRYPOINT ["python3", "benchmark/harness.py"]

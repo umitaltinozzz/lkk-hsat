@@ -1,0 +1,3 @@
+agreement validation failed; no measurement runs were started:
+benchmark/cnfs/smoke/sat.cnf: {'cadical': 'SATISFIABLE', 'kissat': 'ERROR'}
+benchmark/cnfs/smoke/unsat.cnf: {'cadical': 'UNSATISFIABLE', 'kissat': 'ERROR'}

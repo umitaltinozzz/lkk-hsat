@@ -1,0 +1,55 @@
+{
+  "benchmark_timeout_seconds": 5.0,
+  "compiler_flags": "g++ -std=c++17 -O3 -DNDEBUG -Wall -Wextra; CaDiCaL: -O3 -DNDEBUG -DNCONTRACTS -DNTRACING",
+  "completed_utc": "2026-08-17T19:01:41.054887+00:00",
+  "correctness_failures": 2,
+  "flow_mismatches": 0,
+  "indexed_binary_sha256": "6a63f25fa1cfd4d464e95159c4255d5eefe489711a1e40b9487588f608d9872a",
+  "machine": {
+    "captured_utc": "2026-08-17T19:00:05.738001+00:00",
+    "cgroup": "15:name=systemd:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n14:misc:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n13:rdma:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n12:pids:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n11:hugetlb:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n10:net_prio:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n9:perf_event:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n8:net_cls:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n7:freezer:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n6:devices:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n5:memory:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n4:blkio:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n3:cpuacct:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n2:cpu:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n1:cpuset:/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n0::/docker/c0a69b3a9b357ef36143c0eb58c2a4ebe3ebf5c3e66e0e168028dcaa19bbbe1b\n",
+    "cpu_model": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+    "logical_cpus_visible": 16,
+    "memory_bytes_visible": 16647536640,
+    "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "uname": [
+      "Linux",
+      "c0a69b3a9b35",
+      "5.15.167.4-microsoft-standard-WSL2",
+      "#1 SMP Tue Nov 5 00:21:55 UTC 2024",
+      "x86_64",
+      ""
+    ]
+  },
+  "native_image_id": "sha256:eeb309c684aeb6ce251161fc1755ed1173e93ee6012b939b35943e7b2b4b4e8f",
+  "phase": "4C",
+  "predecessors_before": {
+    "phase2": {
+      "file_count": 235,
+      "root": "results/phase2/20260816Tphase2validation02Z",
+      "tree_sha256": "dba6b4579fa6ee07bd55564c796b2e70f37633028bfa571c5002dc8a7e4c56e7"
+    },
+    "phase3": {
+      "file_count": 522,
+      "root": "results/phase3/20260816Tphase3benchmark01Z",
+      "tree_sha256": "3efa0ca3f95a96e0a11b149470fb075882e61cc3ccb0b05e1af63a34e9f97a15"
+    },
+    "phase4a": {
+      "file_count": 733,
+      "root": "results/phase4a/20260816Tphase4anative04Z",
+      "tree_sha256": "610c993c1e415a03b4171b6428b0ed564730d3cfd84e90b2c0bcf6c2331fccf1"
+    },
+    "phase4b": {
+      "file_count": 6030,
+      "root": "results/phase4b/20260816Tphase4bfallbacklemma01Z",
+      "tree_sha256": "7c45b0249551f5bba3f4aafa56b4109fea6dd853fbe7284ce912a5daa9a9a5cc"
+    }
+  },
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "run_id": "20260817Tphase4cfinal03Z",
+  "sealed_binary_sha256": "0f44680eb01aa2b9d8dbe0ad2eabd1554b0af9ad7256e804a1a26d9b6907e30b",
+  "shared_core_binary_sha256": "a4740460181baa2223912559cf5f492bb6043595025b1713c3b08701c46d15ff",
+  "started_utc": "2026-08-17T19:00:05.737923+00:00",
+  "stopped_before_performance": true
+}

@@ -1,0 +1,285 @@
+{
+  "ablation_runs": 720,
+  "cadical_commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+  "chosen_timeout_seconds": 60.0,
+  "compiler_flags": "g++ -std=c++17 -O3 -DNDEBUG -Wall -Wextra; CaDiCaL: -O3 -DNDEBUG -DNCONTRACTS -DNTRACING",
+  "completed_utc": "2026-08-19T12:26:42.796142+00:00",
+  "config": {
+    "ablation_max_instances": 120,
+    "ablation_seeds": [
+      1
+    ],
+    "ablation_variants": {
+      "A_lkk_disabled": {
+        "fallback": "cadical",
+        "kind": "native",
+        "stop_after": "none"
+      },
+      "B_gate_only": {
+        "fallback": "cadical",
+        "kind": "native",
+        "stop_after": "gate"
+      },
+      "C_gate_recovery": {
+        "fallback": "cadical",
+        "kind": "native",
+        "stop_after": "recovery"
+      },
+      "D_gate_recovery_registry": {
+        "fallback": "cadical",
+        "kind": "native",
+        "stop_after": "registry"
+      },
+      "E_full_flow": {
+        "fallback": "cadical",
+        "kind": "native",
+        "stop_after": "flow"
+      },
+      "F_full_selector": {
+        "fallback": "selector",
+        "kind": "native",
+        "stop_after": "flow"
+      }
+    },
+    "benchmark_timeout_seconds": 60.0,
+    "cadical": {
+      "args": [
+        "--seed={seed}",
+        "--stats",
+        "--no-witness",
+        "-f",
+        "{cnf}"
+      ],
+      "executable": "/opt/solvers/bin/cadical",
+      "version_args": [
+        "--version"
+      ]
+    },
+    "calibration_fraction": 0.2,
+    "calibration_max_instances": 160,
+    "calibration_timeout_grid": [
+      5.0,
+      15.0,
+      30.0,
+      60.0
+    ],
+    "corpus_root": "benchmarks/phase5",
+    "evaluation_seeds": [
+      1
+    ],
+    "immutable_predecessors": {
+      "results/phase1/20260816Tphase1baseline04Z": "",
+      "results/phase2/20260816Tphase2validation02Z": "dba6b4579fa6ee07bd55564c796b2e70f37633028bfa571c5002dc8a7e4c56e7",
+      "results/phase3/20260816Tphase3benchmark01Z": "3efa0ca3f95a96e0a11b149470fb075882e61cc3ccb0b05e1af63a34e9f97a15",
+      "results/phase4a/20260816Tphase4anative04Z": "",
+      "results/phase4b/20260816Tphase4bfallbacklemma01Z": ""
+    },
+    "kissat": {
+      "args": [
+        "--seed={seed}",
+        "--statistics",
+        "-n",
+        "--relaxed",
+        "{cnf}"
+      ],
+      "executable": "/opt/solvers/bin/kissat",
+      "version_args": [
+        "--version"
+      ]
+    },
+    "lenient_parsing_provenance": {
+      "alternative_rejected": "Rewriting the corpus to strip the trailer would change every hash and detach the artefacts from the published sets.",
+      "effect": "DIMACS parsing strictness only; neither flag touches search. Checked on an instance both parse without help: the answer is UNSATISFIABLE with and without.",
+      "note": "Our own parser handles the trailer directly; see the comment in native/core/lkk_core.hpp.",
+      "what": "cadical gets -f and kissat gets --relaxed.",
+      "why": "SATLIB files end with a lone 0 after the last clause. Both locked solvers count it as an extra clause and refuse the file with 'too many clauses', which left 408 of 1192 instances - every uf/uuf set, pret and one dubois - with no baseline measurement at all."
+    },
+    "manifests": [
+      "benchmarks/phase5/manifest_satlib.csv",
+      "benchmarks/phase5/manifest_sc2024.csv"
+    ],
+    "modes": {
+      "A_cadical": {
+        "kind": "direct",
+        "solver": "cadical"
+      },
+      "B_kissat": {
+        "kind": "direct",
+        "solver": "kissat"
+      },
+      "C_lkk_cadical": {
+        "fallback": "cadical",
+        "kind": "native",
+        "stop_after": "flow"
+      },
+      "D_lkk_kissat": {
+        "fallback": "kissat",
+        "kind": "native",
+        "stop_after": "flow"
+      },
+      "E_lkk_selector": {
+        "fallback": "selector",
+        "kind": "native",
+        "stop_after": "flow"
+      }
+    },
+    "native": {
+      "atleast_boxes": true,
+      "atleast_boxes_provenance": {
+        "default": "false, so this configuration still reproduces the Phase 5 numbers; Phase 6 turns it on",
+        "soundness": "A satisfying assignment sets at least demand(i) variables of box i, and at most capacity(j) of resource j, so it induces a feasible flow; no feasible flow therefore means no satisfying assignment. phase2/witness.py checks the one-sided evidence independently.",
+        "what": "Admits a demand box proved only by its at-least-r family, without the matching at-most-r half.",
+        "why": "The min cut compares cut capacity against summed demands and never uses an upper bound, so the at-most half is evidence the refutation does not consume. Requiring it hid the pigeonhole family: the standard encoding states only that each pigeon occupies some hole."
+      },
+      "derived_clause_budget": 5000,
+      "executable": "/opt/solvers/bin/lkk-native5",
+      "family_check_budget": 300000,
+      "family_check_budget_provenance": {
+        "fitted_by": "phase5/tune.py",
+        "fitted_on": "40 generated calibration instances, seeds 71000+, disjoint from every benchmark seed range",
+        "mean_par2_ms": {
+          "1000000": 1532.9,
+          "200000": 1571.9,
+          "300000": 1526.9,
+          "500000": 1528.8
+        },
+        "method": "F-race over [100000, 200000, 300000, 500000, 1000000] scored by mean PAR-2",
+        "not_tuned_on": "results/phase3 benchmark instances",
+        "why_not_the_old_value": "Phase 4C charges work that used to be unbilled, so a check no longer costs what it cost when 200000 was chosen"
+      }
+    },
+    "par2_multiplier": 2,
+    "phase": 5,
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "selector": {
+      "default": {
+        "min_boxes": 4,
+        "min_clauses": 100000,
+        "min_signal": 0
+      },
+      "fitted_on": "calibration split only, never the evaluation split",
+      "form": "kissat if (boxes_found >= min_boxes and registry incomplete and gate signal >= min_signal) or clauses >= min_clauses; else cadical",
+      "search_grid": {
+        "min_boxes": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "min_clauses": [
+          100000,
+          500000,
+          2000000,
+          1000000000
+        ],
+        "min_signal": [
+          0,
+          2,
+          8
+        ]
+      }
+    },
+    "telemetry_timeout_seconds": 60.0,
+    "validation_timeout_seconds": 60.0
+  },
+  "corpus_instances": 1192,
+  "correctness_cases": 954,
+  "correctness_failures": 0,
+  "evaluation_runs": 4770,
+  "kissat_commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+  "machine": {
+    "captured_utc": "2026-08-18T11:56:53.820417+00:00",
+    "cgroup": "15:name=systemd:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n14:misc:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n13:rdma:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n12:pids:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n11:hugetlb:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n10:net_prio:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n9:perf_event:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n8:net_cls:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n7:freezer:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n6:devices:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n5:memory:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n4:blkio:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n3:cpuacct:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n2:cpu:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n1:cpuset:/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n0::/docker/e26db29baa7ac4d0e1d31681b1800950a1224f6317fc42511b0579c3abf014a1\n",
+    "cpu_model": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+    "logical_cpus_visible": 16,
+    "memory_bytes_visible": 16647536640,
+    "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "uname": [
+      "Linux",
+      "e26db29baa7a",
+      "5.15.167.4-microsoft-standard-WSL2",
+      "#1 SMP Tue Nov 5 00:21:55 UTC 2024",
+      "x86_64",
+      ""
+    ]
+  },
+  "native_binary_sha256": "b4d574c12151a8b2394a77c88f5e6374701b9f2b4a6e116f0ceba0af4c63d7c0",
+  "native_image_id": "sha256:93f053e159357340c767263b5a2ad0e20f499cf6fb846d87f8a47fcc6c7b350c",
+  "phase": 5,
+  "plots": [
+    "cactus.svg",
+    "scatter_lkk_vs_cadical.svg",
+    "scatter_lkk_vs_kissat.svg",
+    "structural_speedup.svg",
+    "no_structure_overhead.svg"
+  ],
+  "predecessors_after": {
+    "results/phase1/20260816Tphase1baseline04Z": {
+      "file_count": 64,
+      "root": "/work/results/phase1/20260816Tphase1baseline04Z",
+      "tree_sha256": "1feedb4cfbe2094ccbb1d4646ee2468c07c9aad7969765f151b20d59751175ee"
+    },
+    "results/phase2/20260816Tphase2validation02Z": {
+      "file_count": 235,
+      "root": "/work/results/phase2/20260816Tphase2validation02Z",
+      "tree_sha256": "dba6b4579fa6ee07bd55564c796b2e70f37633028bfa571c5002dc8a7e4c56e7"
+    },
+    "results/phase3/20260816Tphase3benchmark01Z": {
+      "file_count": 522,
+      "root": "/work/results/phase3/20260816Tphase3benchmark01Z",
+      "tree_sha256": "3efa0ca3f95a96e0a11b149470fb075882e61cc3ccb0b05e1af63a34e9f97a15"
+    },
+    "results/phase4a/20260816Tphase4anative04Z": {
+      "file_count": 733,
+      "root": "/work/results/phase4a/20260816Tphase4anative04Z",
+      "tree_sha256": "610c993c1e415a03b4171b6428b0ed564730d3cfd84e90b2c0bcf6c2331fccf1"
+    },
+    "results/phase4b/20260816Tphase4bfallbacklemma01Z": {
+      "file_count": 6030,
+      "root": "/work/results/phase4b/20260816Tphase4bfallbacklemma01Z",
+      "tree_sha256": "7c45b0249551f5bba3f4aafa56b4109fea6dd853fbe7284ce912a5daa9a9a5cc"
+    }
+  },
+  "predecessors_before": {
+    "results/phase1/20260816Tphase1baseline04Z": {
+      "file_count": 64,
+      "root": "/work/results/phase1/20260816Tphase1baseline04Z",
+      "tree_sha256": "1feedb4cfbe2094ccbb1d4646ee2468c07c9aad7969765f151b20d59751175ee"
+    },
+    "results/phase2/20260816Tphase2validation02Z": {
+      "file_count": 235,
+      "root": "/work/results/phase2/20260816Tphase2validation02Z",
+      "tree_sha256": "dba6b4579fa6ee07bd55564c796b2e70f37633028bfa571c5002dc8a7e4c56e7"
+    },
+    "results/phase3/20260816Tphase3benchmark01Z": {
+      "file_count": 522,
+      "root": "/work/results/phase3/20260816Tphase3benchmark01Z",
+      "tree_sha256": "3efa0ca3f95a96e0a11b149470fb075882e61cc3ccb0b05e1af63a34e9f97a15"
+    },
+    "results/phase4a/20260816Tphase4anative04Z": {
+      "file_count": 733,
+      "root": "/work/results/phase4a/20260816Tphase4anative04Z",
+      "tree_sha256": "610c993c1e415a03b4171b6428b0ed564730d3cfd84e90b2c0bcf6c2331fccf1"
+    },
+    "results/phase4b/20260816Tphase4bfallbacklemma01Z": {
+      "file_count": 6030,
+      "root": "/work/results/phase4b/20260816Tphase4bfallbacklemma01Z",
+      "tree_sha256": "7c45b0249551f5bba3f4aafa56b4109fea6dd853fbe7284ce912a5daa9a9a5cc"
+    }
+  },
+  "predecessors_immutable": true,
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "run_id": "20260818Tphase6full02Z",
+  "selector_parameters": {
+    "min_boxes": 16,
+    "min_clauses": 100000,
+    "min_signal": 8
+  },
+  "started_utc": "2026-08-18T11:56:53.820181+00:00"
+}

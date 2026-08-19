@@ -1,0 +1,18 @@
+{
+  "instances": 1192,
+  "workers": 8,
+  "wall_seconds": 125.5,
+  "front_end_ms_median": 10.28,
+  "front_end_ms_p95": 1574.38,
+  "front_end_ms_total": 626582.2,
+  "strata": {
+    "no_useful_detected_structure": 195,
+    "cardinality_exact_r_heavy": 30,
+    "unknown_fallback_dominated": 634,
+    "resource_allocation_like": 322,
+    "structural_not_closed_by_flow": 9,
+    "matching_hall_like": 2
+  },
+  "structural_unsat": 0,
+  "gate_declined": 31
+}

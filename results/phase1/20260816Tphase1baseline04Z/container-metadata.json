@@ -1,0 +1,47 @@
+{
+  "captured_utc": "2026-08-16T15:29:07.349470+00:00",
+  "cgroup": "15:name=systemd:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n14:misc:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n13:rdma:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n12:pids:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n11:hugetlb:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n10:net_prio:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n9:perf_event:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n8:net_cls:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n7:freezer:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n6:devices:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n5:memory:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n4:blkio:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n3:cpuacct:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n2:cpu:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n1:cpuset:/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n0::/docker/e53bc587d5ae47d2981945e5784a9eba490443df06b6b566630d2ef10a25d5f2\n",
+  "config_sha256": "4ca802373a2c23d0b19bc938b838ed35b0282e28b43f40fcd8c1f47affcd880a",
+  "cpu_model": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+  "experiment": "phase1-smoke-baseline",
+  "instances": [
+    {
+      "clauses": 3,
+      "path": "benchmark/cnfs/smoke/sat.cnf",
+      "sha256": "3ac33c120f6a13a8d3b4cba665e1adc13ebbea9e3ee4061e5dc9989d74a1e232",
+      "variables": 3
+    },
+    {
+      "clauses": 4,
+      "path": "benchmark/cnfs/smoke/unsat.cnf",
+      "sha256": "4c2883576dc96ce2346203caac3167cd84f86dd7419e09ab0063eb510ff8108f",
+      "variables": 2
+    }
+  ],
+  "logical_cpus_visible": 16,
+  "memory_bytes_visible": 16647536640,
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "solvers": [
+    {
+      "binary_sha256": "77236219227fe9bc340e54563f347e2ec1b60f0189a076899dd82340fd3a304d",
+      "executable": "/opt/solvers/bin/cadical",
+      "name": "cadical",
+      "version": "3.0.1"
+    },
+    {
+      "binary_sha256": "e3d85acb36b9feb1828cedbfca70941efe69f76dc80fa99273e60ed0ed73e168",
+      "executable": "/opt/solvers/bin/kissat",
+      "name": "kissat",
+      "version": "4.0.4"
+    }
+  ],
+  "uname": [
+    "Linux",
+    "e53bc587d5ae",
+    "5.15.167.4-microsoft-standard-WSL2",
+    "#1 SMP Tue Nov 5 00:21:55 UTC 2024",
+    "x86_64",
+    ""
+  ]
+}

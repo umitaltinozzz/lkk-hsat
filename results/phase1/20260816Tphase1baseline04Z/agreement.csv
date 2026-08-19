@@ -1,0 +1,5 @@
+instance,solver,seed,status,timed_out,exit_code,runtime_seconds,raw_log
+benchmark/cnfs/smoke/sat.cnf,cadical,1,SATISFIABLE,False,10,0.049296067,results/phase1/20260816Tphase1baseline04Z/logs/validation/sat__cadical.log
+benchmark/cnfs/smoke/sat.cnf,kissat,1,SATISFIABLE,False,10,0.018571051,results/phase1/20260816Tphase1baseline04Z/logs/validation/sat__kissat.log
+benchmark/cnfs/smoke/unsat.cnf,cadical,1,UNSATISFIABLE,False,20,0.044817322,results/phase1/20260816Tphase1baseline04Z/logs/validation/unsat__cadical.log
+benchmark/cnfs/smoke/unsat.cnf,kissat,1,UNSATISFIABLE,False,20,0.018514603,results/phase1/20260816Tphase1baseline04Z/logs/validation/unsat__kissat.log

@@ -1,0 +1,16 @@
+{
+  "agreement": "passed",
+  "completed_utc": "2026-08-16T15:29:08.784462+00:00",
+  "instances": 2,
+  "measurement_runs": 24,
+  "solvers": 2,
+  "status_counts": {
+    "SATISFIABLE": 12,
+    "UNSATISFIABLE": 12
+  },
+  "timeouts": 0,
+  "validated_results": {
+    "benchmark/cnfs/smoke/sat.cnf": "SATISFIABLE",
+    "benchmark/cnfs/smoke/unsat.cnf": "UNSATISFIABLE"
+  }
+}

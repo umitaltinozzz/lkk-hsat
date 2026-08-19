@@ -1,0 +1,12 @@
+{
+  "agreement": "passed",
+  "completed_utc": "2026-08-16T15:27:53.023522+00:00",
+  "instances": 2,
+  "measurement_runs": 24,
+  "solvers": 2,
+  "status_counts": {
+    "SATISFIABLE": 12,
+    "UNSATISFIABLE": 12
+  },
+  "timeouts": 0
+}

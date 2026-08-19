@@ -1,0 +1,63 @@
+{
+  "phase": 3,
+  "immutable_phase2_relative_path": "results/phase2/20260816Tphase2validation02Z",
+  "immutable_phase2_tree_sha256": "dba6b4579fa6ee07bd55564c796b2e70f37633028bfa571c5002dc8a7e4c56e7",
+  "calibration_timeout_seconds": 3.0,
+  "validation_timeout_seconds": 30.0,
+  "benchmark_timeout_seconds": 5.0,
+  "seeds": [1, 2, 3],
+  "repetitions": 1,
+  "generator_seed": 31000,
+  "recovery": {
+    "time_budget_ms": 250.0,
+    "memory_budget_bytes": 16777216,
+    "derived_clause_budget": 5000,
+    "max_resolution_depth": 8,
+    "max_clause_size": 12,
+    "pivot_occurrence_limit": 2
+  },
+  "benefit_gate": {
+    "minimum_signal_count": 2,
+    "maximum_clauses": 50000,
+    "maximum_estimated_resolution_pairs": 2000000
+  },
+  "registry": {
+    "family_check_budget": 200000,
+    "maximum_resource_capacity": 3
+  },
+  "cadical": {
+    "executable": "/opt/solvers/bin/cadical",
+    "version_args": ["--version"],
+    "args": ["--seed={seed}", "--stats", "--no-witness", "{cnf}"]
+  },
+  "kissat": {
+    "executable": "/opt/solvers/bin/kissat",
+    "version_args": ["--version"],
+    "args": ["--seed={seed}", "--statistics", "-n", "{cnf}"]
+  },
+  "calibration_grid": {
+    "pigeonhole_exact1": [8, 10, 12, 14, 16, 18, 20],
+    "exact_r_allocation": [7, 9, 11, 13, 15],
+    "overlapping_hall_violation": [8, 10, 12, 14, 16, 18],
+    "capacity2_violation": [3, 4, 5, 6, 7, 8],
+    "hidden_pigeonhole": [6, 7, 8, 9, 10],
+    "satisfiable_capacity_control": [8, 12, 16, 20, 24],
+    "random_3sat": [150, 250, 400, 600, 800]
+  },
+  "selected_instances": [
+    {"family": "pigeonhole_exact1", "scale": 8, "noise_percent": 0, "variant": "boundary_low"},
+    {"family": "pigeonhole_exact1", "scale": 10, "noise_percent": 0, "variant": "boundary_high"},
+    {"family": "exact_r_allocation", "scale": 9, "noise_percent": 0, "variant": "boundary_low"},
+    {"family": "exact_r_allocation", "scale": 11, "noise_percent": 0, "variant": "boundary_high"},
+    {"family": "overlapping_hall_violation", "scale": 8, "noise_percent": 0, "variant": "boundary_low"},
+    {"family": "overlapping_hall_violation", "scale": 9, "noise_percent": 0, "variant": "boundary_high"},
+    {"family": "capacity2_violation", "scale": 5, "noise_percent": 0, "variant": "boundary_low"},
+    {"family": "capacity2_violation", "scale": 5, "noise_percent": 100, "variant": "noise100"},
+    {"family": "hidden_pigeonhole", "scale": 9, "noise_percent": 0, "variant": "visible_noise0"},
+    {"family": "hidden_pigeonhole", "scale": 9, "noise_percent": 100, "variant": "hidden_noise100"},
+    {"family": "satisfiable_capacity_control", "scale": 24, "noise_percent": 0, "variant": "sat_fallback"},
+    {"family": "random_3sat", "scale": 150, "noise_percent": 0, "variant": "uniform"},
+    {"family": "random_3sat", "scale": 400, "noise_percent": 0, "variant": "planted_sat"},
+    {"family": "random_3sat", "scale": 800, "noise_percent": 0, "variant": "planted_sat"}
+  ]
+}

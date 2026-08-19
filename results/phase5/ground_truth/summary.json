@@ -1,0 +1,14 @@
+{
+  "instances": 1192,
+  "solver": "kissat",
+  "timeout_seconds": 60.0,
+  "workers": 8,
+  "status_counts": {
+    "SATISFIABLE": 446,
+    "UNSATISFIABLE": 106,
+    "TIMEOUT": 232,
+    "UNKNOWN": 408
+  },
+  "decided": 552,
+  "unsat": 106
+}

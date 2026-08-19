@@ -1,0 +1,6 @@
+instance,source,domain,stratum,boxes,resources,total_demand,maximum_flow,flow_nodes,flow_edges,structural_solve_ms,witness_ms,lkk_runtime_ms,cadical_runtime_ms,cadical_status,kissat_runtime_ms,kissat_status
+hole10.cnf,SATLIB,matching_capacity,lkk_direct_structural_unsat,11,10,11,10,23,131,11.1725,,,,,,
+hole6.cnf,SATLIB,matching_capacity,lkk_direct_structural_unsat,7,6,7,6,15,55,3.34594,,,,,,
+hole7.cnf,SATLIB,matching_capacity,lkk_direct_structural_unsat,8,7,8,7,17,71,4.44363,1.59953,17.796956,117.241474,UNSATISFIABLE,66.385828,UNSATISFIABLE
+hole8.cnf,SATLIB,matching_capacity,lkk_direct_structural_unsat,9,8,9,8,19,89,5.52134,3.02055,35.136348,568.396926,UNSATISFIABLE,116.690204,UNSATISFIABLE
+hole9.cnf,SATLIB,matching_capacity,lkk_direct_structural_unsat,10,9,10,9,21,109,13.0652,2.37952,17.688939,3680.839837,UNSATISFIABLE,317.15893,UNSATISFIABLE

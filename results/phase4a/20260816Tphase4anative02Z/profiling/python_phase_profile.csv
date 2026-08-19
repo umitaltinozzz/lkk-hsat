@@ -1,0 +1,15 @@
+instance,parse_ms,gate_ms,benefit_gate_ms,recovery_ms,registry_ms,flow_ms,witness_ms,witness_check_ms,structural_result,boxes_found,resources_found,family_checks
+001_pigeonhole_exact1_boundary_low_scale8_noise0.cnf,9.676194,3.456919,0.008571,2.722764,80.730586,0.513381,0.389073,20.850573,UNSAT,8,7,11312
+002_pigeonhole_exact1_boundary_high_scale10_noise0.cnf,13.259038,7.808026,0.018358,7.028177,278.99317,0.644745,0.855659,30.795157,UNSAT,10,9,37170
+003_exact_r_allocation_boundary_low_scale9_noise0.cnf,10.150757,7.963247,0.008608,4.408767,1027.835674,0.425621,0.616381,24.343974,UNSAT,5,9,141480
+004_exact_r_allocation_boundary_high_scale11_noise0.cnf,15.453209,15.67062,0.008848,8.83915,1451.931631,0.0,0.0,0.0,UNKNOWN,0,0,200165
+005_overlapping_hall_violation_boundary_low_scale8_noise0.cnf,20.330092,12.999824,0.014129,9.570106,675.074123,0.0,0.0,0.0,UNKNOWN,17,0,200001
+006_overlapping_hall_violation_boundary_high_scale9_noise0.cnf,18.592929,11.436317,0.007681,8.740028,782.550414,0.0,0.0,0.0,UNKNOWN,19,0,200001
+007_capacity2_violation_boundary_low_scale5_noise0.cnf,13.141607,9.170143,0.007149,5.878358,750.434152,0.399528,0.769518,33.40966,UNSAT,11,5,31295
+008_capacity2_violation_noise100_scale5_noise100.cnf,22.450132,21.933687,0.017655,14.079582,910.148446,0.407107,1.286761,47.835907,UNSAT,11,5,156146
+009_hidden_pigeonhole_visible_noise0_scale9_noise0.cnf,16.238864,12.093563,0.008766,24.815331,507.561421,0.473308,1.573303,47.908502,UNSAT,9,8,117666
+010_hidden_pigeonhole_hidden_noise100_scale9_noise100.cnf,26.209644,26.161744,0.018558,34.660796,320.307583,0.0,0.0,0.0,UNKNOWN,0,0,200001
+011_satisfiable_capacity_control_sat_fallback_scale24_noise0.cnf,104.269039,97.117663,0.01104,86.92475,1097.748544,0.0,0.0,0.0,UNKNOWN,0,0,200246
+012_random_3sat_uniform_scale150_noise0.cnf,10.551006,6.478377,0.007361,4.415545,9.890145,0.0,0.0,0.0,UNKNOWN,0,0,7055
+013_random_3sat_planted_sat_scale400_noise0.cnf,21.836493,20.217393,0.012311,13.2141,61.862408,0.0,0.0,0.0,UNKNOWN,0,0,44536
+014_random_3sat_planted_sat_scale800_noise0.cnf,36.385279,36.524891,0.009108,25.91043,245.068386,0.0,0.0,0.0,UNKNOWN,0,0,185346

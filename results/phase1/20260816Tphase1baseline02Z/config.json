@@ -1,0 +1,22 @@
+{
+  "experiment": "phase1-smoke-baseline",
+  "timeout_seconds": 10.0,
+  "validation_seed": 1,
+  "seeds": [1, 2, 3],
+  "repetitions": 2,
+  "cnf_globs": ["benchmark/cnfs/smoke/*.cnf"],
+  "solvers": [
+    {
+      "name": "cadical",
+      "executable": "/opt/solvers/bin/cadical",
+      "version_args": ["--version"],
+      "args": ["--seed={seed}", "--stats", "--no-witness", "{cnf}"]
+    },
+    {
+      "name": "kissat",
+      "executable": "/opt/solvers/bin/kissat",
+      "version_args": ["--version"],
+      "args": ["--seed={seed}", "--statistics", "-n", "{cnf}"]
+    }
+  ]
+}

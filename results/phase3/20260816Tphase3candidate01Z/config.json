@@ -1,0 +1,197 @@
+{
+  "benchmark_timeout_seconds": 5.0,
+  "benefit_gate": {
+    "maximum_clauses": 50000,
+    "maximum_estimated_resolution_pairs": 2000000,
+    "minimum_signal_count": 2
+  },
+  "cadical": {
+    "args": [
+      "--seed={seed}",
+      "--stats",
+      "--no-witness",
+      "{cnf}"
+    ],
+    "executable": "/opt/solvers/bin/cadical",
+    "version_args": [
+      "--version"
+    ]
+  },
+  "calibration_grid": {
+    "capacity2_violation": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "exact_r_allocation": [
+      7,
+      9,
+      11,
+      13,
+      15
+    ],
+    "hidden_pigeonhole": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "overlapping_hall_violation": [
+      8,
+      10,
+      12,
+      14,
+      16,
+      18
+    ],
+    "pigeonhole_exact1": [
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "random_3sat": [
+      150,
+      250,
+      400,
+      600,
+      800
+    ],
+    "satisfiable_capacity_control": [
+      8,
+      12,
+      16,
+      20,
+      24
+    ]
+  },
+  "calibration_timeout_seconds": 3.0,
+  "generator_seed": 31000,
+  "immutable_phase2_relative_path": "results/phase2/20260816Tphase2validation02Z",
+  "immutable_phase2_tree_sha256": "dba6b4579fa6ee07bd55564c796b2e70f37633028bfa571c5002dc8a7e4c56e7",
+  "kissat": {
+    "args": [
+      "--seed={seed}",
+      "--statistics",
+      "-n",
+      "{cnf}"
+    ],
+    "executable": "/opt/solvers/bin/kissat",
+    "version_args": [
+      "--version"
+    ]
+  },
+  "phase": 3,
+  "recovery": {
+    "derived_clause_budget": 5000,
+    "max_clause_size": 12,
+    "max_resolution_depth": 8,
+    "memory_budget_bytes": 16777216,
+    "pivot_occurrence_limit": 2,
+    "time_budget_ms": 250.0
+  },
+  "registry": {
+    "family_check_budget": 200000,
+    "maximum_resource_capacity": 3
+  },
+  "repetitions": 1,
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "selected_instances": [
+    {
+      "family": "pigeonhole_exact1",
+      "noise_percent": 0,
+      "scale": 8,
+      "variant": "boundary_low"
+    },
+    {
+      "family": "pigeonhole_exact1",
+      "noise_percent": 0,
+      "scale": 10,
+      "variant": "boundary_high"
+    },
+    {
+      "family": "exact_r_allocation",
+      "noise_percent": 0,
+      "scale": 9,
+      "variant": "boundary_low"
+    },
+    {
+      "family": "exact_r_allocation",
+      "noise_percent": 0,
+      "scale": 11,
+      "variant": "boundary_high"
+    },
+    {
+      "family": "overlapping_hall_violation",
+      "noise_percent": 0,
+      "scale": 8,
+      "variant": "boundary_low"
+    },
+    {
+      "family": "overlapping_hall_violation",
+      "noise_percent": 0,
+      "scale": 10,
+      "variant": "boundary_high"
+    },
+    {
+      "family": "capacity2_violation",
+      "noise_percent": 0,
+      "scale": 5,
+      "variant": "boundary_low"
+    },
+    {
+      "family": "capacity2_violation",
+      "noise_percent": 0,
+      "scale": 6,
+      "variant": "boundary_high"
+    },
+    {
+      "family": "hidden_pigeonhole",
+      "noise_percent": 0,
+      "scale": 9,
+      "variant": "visible_noise0"
+    },
+    {
+      "family": "hidden_pigeonhole",
+      "noise_percent": 100,
+      "scale": 9,
+      "variant": "hidden_noise100"
+    },
+    {
+      "family": "satisfiable_capacity_control",
+      "noise_percent": 0,
+      "scale": 24,
+      "variant": "sat_fallback"
+    },
+    {
+      "family": "random_3sat",
+      "noise_percent": 0,
+      "scale": 150,
+      "variant": "uniform"
+    },
+    {
+      "family": "random_3sat",
+      "noise_percent": 0,
+      "scale": 400,
+      "variant": "planted_sat"
+    },
+    {
+      "family": "random_3sat",
+      "noise_percent": 0,
+      "scale": 800,
+      "variant": "planted_sat"
+    }
+  ],
+  "validation_timeout_seconds": 30.0
+}

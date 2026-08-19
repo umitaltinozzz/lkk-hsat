@@ -1,0 +1,25 @@
+{
+  "fitted_on": "generated calibration instances only; benchmark seeds excluded",
+  "calibration_instances": 23,
+  "calibration_seed_base": 71000,
+  "candidates": [
+    "budget=100000",
+    "budget=200000",
+    "budget=300000",
+    "budget=500000",
+    "budget=1000000"
+  ],
+  "evaluations": {
+    "budget=100000": 12,
+    "budget=200000": 23,
+    "budget=300000": 23,
+    "budget=500000": 23,
+    "budget=1000000": 6
+  },
+  "mean_par2_ms": {
+    "budget=200000": 891.4840904347826,
+    "budget=300000": 892.2876284347826,
+    "budget=500000": 895.7963864782608
+  },
+  "family_check_budget": 200000
+}

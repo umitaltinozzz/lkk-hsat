@@ -1,0 +1,60 @@
+{
+  "completed_utc": "2026-08-16T15:45:01.638340+00:00",
+  "config_sha256": "eb13d557b256181ddaf8183ee0c65b4b63024819d3f59ecc8fe96df64d7913a4",
+  "docker_image_id": "sha256:5cfc3c4365e06524f75db57b13652c8876d3cd5e9cc26732d0cf9e0811aba68e",
+  "docker_server_version": "29.4.2",
+  "fallback_uses": 12,
+  "final_answer_mismatches": 0,
+  "flow_exhaustive_mismatches": 0,
+  "host_name": "UMIT",
+  "machine": {
+    "captured_utc": "2026-08-16T15:44:50.885690+00:00",
+    "cgroup": "15:name=systemd:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n14:misc:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n13:rdma:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n12:pids:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n11:hugetlb:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n10:net_prio:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n9:perf_event:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n8:net_cls:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n7:freezer:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n6:devices:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n5:memory:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n4:blkio:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n3:cpuacct:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n2:cpu:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n1:cpuset:/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n0::/docker/b9c0dcae43c4888c203591ea187e0843fe17c185bee63ccba1675bcc4a266217\n",
+    "cpu_model": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+    "logical_cpus_visible": 16,
+    "memory_bytes_visible": 16647536640,
+    "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "uname": [
+      "Linux",
+      "b9c0dcae43c4",
+      "5.15.167.4-microsoft-standard-WSL2",
+      "#1 SMP Tue Nov 5 00:21:55 UTC 2024",
+      "x86_64",
+      ""
+    ]
+  },
+  "oracle_instances": 1000,
+  "phase": 2,
+  "phase1_after": {
+    "file_count": 64,
+    "root": "/work/results/phase1/20260816Tphase1baseline04Z",
+    "tree_sha256": "1feedb4cfbe2094ccbb1d4646ee2468c07c9aad7969765f151b20d59751175ee"
+  },
+  "phase1_before": {
+    "file_count": 64,
+    "root": "/work/results/phase1/20260816Tphase1baseline04Z",
+    "tree_sha256": "1feedb4cfbe2094ccbb1d4646ee2468c07c9aad7969765f151b20d59751175ee"
+  },
+  "phase1_immutable": true,
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "run_id": "20260816Tphase2validation01Z",
+  "solvers": [
+    {
+      "binary_sha256": "77236219227fe9bc340e54563f347e2ec1b60f0189a076899dd82340fd3a304d",
+      "executable": "/opt/solvers/bin/cadical",
+      "name": "cadical",
+      "version": "3.0.1"
+    },
+    {
+      "binary_sha256": "e3d85acb36b9feb1828cedbfca70941efe69f76dc80fa99273e60ed0ed73e168",
+      "executable": "/opt/solvers/bin/kissat",
+      "name": "kissat",
+      "version": "4.0.4"
+    }
+  ],
+  "started_utc": "2026-08-16T15:44:50.884157+00:00",
+  "structural_cnfs": 32,
+  "valid_witnesses": 20
+}

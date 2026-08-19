@@ -1,0 +1,14 @@
+category,samples,total_ms,mean_ms,median_ms,measurement
+process_startup,1,97.23743999999999,97.23743999999999,97.23743999999999,instrumented accepted Python calls
+cnf_parsing,14,338.544283,24.1817345,17.415896500000002,instrumented accepted Python calls
+fast_cheap_gate,14,289.032414,20.645172428571428,12.5466935,instrumented accepted Python calls
+benefit_gate,14,0.158143,0.011295928571428571,0.008978,instrumented accepted Python calls
+bounded_recovery,14,251.207884,17.943420285714286,9.204628,instrumented accepted Python calls
+exact_and_resource_registry,14,8200.136683,585.7240487857143,591.317772,instrumented accepted Python calls
+flow_box_test,14,2.86369,0.2045492857142857,0.0,instrumented accepted Python calls
+witness_generation,14,5.490695,0.3921925,0.0,instrumented accepted Python calls
+witness_verification,14,205.143773,14.653126642857142,0.0,instrumented accepted Python calls
+fallback_invocation,13,6495.650678,499.6654367692308,117.04238,accepted Phase 3 median per instance
+serialization_between_components,0,,,,No LKK/fallback structural serialization: external fallback reparses original DIMACS; witness JSON write is included in witness_generation.
+memory_allocation,14,,,,tracemalloc details in python_memory_allocations.csv
+hashing_and_index_construction,1,,,,cProfile operations below; clause hashing/index construction is included in registry/recovery

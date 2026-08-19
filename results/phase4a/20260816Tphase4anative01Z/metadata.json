@@ -1,0 +1,49 @@
+{
+  "cadical_commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+  "compiler_flags": "g++ -std=c++17 -O3 -DNDEBUG -Wall -Wextra; CaDiCaL: -O3 -DNDEBUG -DNCONTRACTS -DNTRACING",
+  "completed_utc": "2026-08-16T16:33:32.997253+00:00",
+  "correctness_failures": 1,
+  "flow_mismatches": 0,
+  "kissat_commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+  "machine": {
+    "captured_utc": "2026-08-16T16:31:52.325321+00:00",
+    "cgroup": "15:name=systemd:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n14:misc:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n13:rdma:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n12:pids:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n11:hugetlb:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n10:net_prio:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n9:perf_event:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n8:net_cls:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n7:freezer:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n6:devices:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n5:memory:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n4:blkio:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n3:cpuacct:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n2:cpu:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n1:cpuset:/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n0::/docker/a4966394918bb857269e39ffce5fa0fd17773c3f16ac0e8a661475e83612b5e0\n",
+    "cpu_model": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+    "logical_cpus_visible": 16,
+    "memory_bytes_visible": 16647536640,
+    "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "uname": [
+      "Linux",
+      "a4966394918b",
+      "5.15.167.4-microsoft-standard-WSL2",
+      "#1 SMP Tue Nov 5 00:21:55 UTC 2024",
+      "x86_64",
+      ""
+    ]
+  },
+  "native_binary_sha256": "8d7d023e64716e8ab8ce221d3c535d169b300d530821ade84164962bcc972e77",
+  "native_image_id": "sha256:edd03f1300bff94eb5828151468b6969825490162cabbf81c620e4cc244e87d9",
+  "phase": "4A",
+  "predecessors_before": {
+    "phase1": {
+      "file_count": 64,
+      "root": "results/phase1/20260816Tphase1baseline04Z",
+      "tree_sha256": "1feedb4cfbe2094ccbb1d4646ee2468c07c9aad7969765f151b20d59751175ee"
+    },
+    "phase2": {
+      "file_count": 235,
+      "root": "results/phase2/20260816Tphase2validation02Z",
+      "tree_sha256": "dba6b4579fa6ee07bd55564c796b2e70f37633028bfa571c5002dc8a7e4c56e7"
+    },
+    "phase3": {
+      "file_count": 522,
+      "root": "results/phase3/20260816Tphase3benchmark01Z",
+      "tree_sha256": "3efa0ca3f95a96e0a11b149470fb075882e61cc3ccb0b05e1af63a34e9f97a15"
+    }
+  },
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "run_id": "20260816Tphase4anative01Z",
+  "started_utc": "2026-08-16T16:31:52.325256+00:00",
+  "stopped_before_performance": true
+}

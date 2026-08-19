@@ -1,0 +1,102 @@
+{
+  "accepted_instances": 14,
+  "benchmark_timeout_seconds": 5.0,
+  "cadical_commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+  "compiler_flags": "g++ -std=c++17 -O3 -DNDEBUG -Wall -Wextra; CaDiCaL: -O3 -DNDEBUG -DNCONTRACTS -DNTRACING",
+  "completed_utc": "2026-08-16T17:57:17.042002+00:00",
+  "correctness_cases": 47,
+  "correctness_failures": 0,
+  "eligible_instances": 29,
+  "expanded_instances": 33,
+  "flow_cases": 5000,
+  "flow_mismatches": 0,
+  "kissat_commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+  "lemma_limits": {
+    "flow_call_budget": 200000,
+    "harvest_check_budget": 2000000,
+    "max_lemma_length": 12,
+    "max_lemmas": 2000
+  },
+  "lemma_verification_budget_seconds_per_instance": 600.0,
+  "lemma_verification_timeout_seconds": 5.0,
+  "lemmas_accepted": 3344,
+  "lemmas_generated": 3344,
+  "lemmas_refuted": 0,
+  "lemmas_unverified": 0,
+  "machine": {
+    "captured_utc": "2026-08-16T17:16:45.353023+00:00",
+    "cgroup": "15:name=systemd:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n14:misc:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n13:rdma:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n12:pids:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n11:hugetlb:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n10:net_prio:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n9:perf_event:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n8:net_cls:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n7:freezer:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n6:devices:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n5:memory:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n4:blkio:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n3:cpuacct:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n2:cpu:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n1:cpuset:/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n0::/docker/39ef61873dd933689d4398ca6aebdcd70e04c5d9f1695c7f7c38f97da8db8a09\n",
+    "cpu_model": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+    "logical_cpus_visible": 16,
+    "memory_bytes_visible": 16647536640,
+    "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "uname": [
+      "Linux",
+      "39ef61873dd9",
+      "5.15.167.4-microsoft-standard-WSL2",
+      "#1 SMP Tue Nov 5 00:21:55 UTC 2024",
+      "x86_64",
+      ""
+    ]
+  },
+  "native_binary_sha256": "dd02e19c84780838408067333aa6d6fab54233325e663c43fbe215002c081f87",
+  "native_image_id": "sha256:d10d5e972950ca001b0293392c66ffff4102cae1a10963fed3a0c8171ef969c3",
+  "part_a_runs": 375,
+  "part_b_runs": 435,
+  "phase": "4B",
+  "predecessors_after": {
+    "phase1": {
+      "file_count": 64,
+      "root": "results/phase1/20260816Tphase1baseline04Z",
+      "tree_sha256": "1feedb4cfbe2094ccbb1d4646ee2468c07c9aad7969765f151b20d59751175ee"
+    },
+    "phase2": {
+      "file_count": 235,
+      "root": "results/phase2/20260816Tphase2validation02Z",
+      "tree_sha256": "dba6b4579fa6ee07bd55564c796b2e70f37633028bfa571c5002dc8a7e4c56e7"
+    },
+    "phase3": {
+      "file_count": 522,
+      "root": "results/phase3/20260816Tphase3benchmark01Z",
+      "tree_sha256": "3efa0ca3f95a96e0a11b149470fb075882e61cc3ccb0b05e1af63a34e9f97a15"
+    },
+    "phase4a": {
+      "file_count": 733,
+      "root": "results/phase4a/20260816Tphase4anative04Z",
+      "tree_sha256": "610c993c1e415a03b4171b6428b0ed564730d3cfd84e90b2c0bcf6c2331fccf1"
+    }
+  },
+  "predecessors_before": {
+    "phase1": {
+      "file_count": 64,
+      "root": "results/phase1/20260816Tphase1baseline04Z",
+      "tree_sha256": "1feedb4cfbe2094ccbb1d4646ee2468c07c9aad7969765f151b20d59751175ee"
+    },
+    "phase2": {
+      "file_count": 235,
+      "root": "results/phase2/20260816Tphase2validation02Z",
+      "tree_sha256": "dba6b4579fa6ee07bd55564c796b2e70f37633028bfa571c5002dc8a7e4c56e7"
+    },
+    "phase3": {
+      "file_count": 522,
+      "root": "results/phase3/20260816Tphase3benchmark01Z",
+      "tree_sha256": "3efa0ca3f95a96e0a11b149470fb075882e61cc3ccb0b05e1af63a34e9f97a15"
+    },
+    "phase4a": {
+      "file_count": 733,
+      "root": "results/phase4a/20260816Tphase4anative04Z",
+      "tree_sha256": "610c993c1e415a03b4171b6428b0ed564730d3cfd84e90b2c0bcf6c2331fccf1"
+    }
+  },
+  "predecessors_immutable": true,
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "run_id": "20260816Tphase4bfallbacklemma01Z",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "started_utc": "2026-08-16T17:16:45.352996+00:00",
+  "validation_timeout_seconds": 30.0
+}

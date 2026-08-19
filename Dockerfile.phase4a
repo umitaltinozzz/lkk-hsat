@@ -1,0 +1,10 @@
+FROM debian@sha256:abd67ffcfa541b485a3dff59865ab629aa048a6c613e639d36e7456b0b229241 AS builder
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential && rm -rf /var/lib/apt/lists/*
+COPY third_party/cadical /src/cadical
+RUN cd /src/cadical && rm -rf build makefile && find . -type f \( -name '*.sh' -o -name '*.cpp' -o -name '*.hpp' -o -name '*.c' -o -name '*.h' -o -name '*.in' -o -name 'VERSION' -o -name 'configure' \) -exec sed -i 's/\r$//' {} + && sh configure -O3 --no-contracts --no-tracing && make -C build -j"$(nproc)" libcadical.a cadical
+COPY native/phase4a/lkk_native.cpp /src/lkk_native.cpp
+RUN g++ -std=c++17 -O3 -DNDEBUG -Wall -Wextra -I/src/cadical/src /src/lkk_native.cpp /src/cadical/build/libcadical.a -o /opt/lkk-native
+
+FROM lkk-hsat-phase1:locked
+COPY --from=builder /opt/lkk-native /opt/solvers/bin/lkk-native
+COPY --from=builder /src/cadical/build/cadical /opt/solvers/bin/cadical-api-build

@@ -1,0 +1,31 @@
+c Generated Phase 2 structural correctness benchmark
+c family=bipartite_matching
+c seed=23012
+c noise_percent=100
+c hidden=false
+c ground_truth=SATISFIABLE
+p cnf 16 24
+-1 -2 0
+1 2 0
+-3 -4 0
+3 4 0
+-5 -6 0
+5 6 0
+-7 -8 0
+7 8 0
+-1 -3 0
+-2 -4 0
+-5 -7 0
+-6 -8 0
+-10 13 -14 0
+-11 -13 -14 0
+-11 -15 -16 0
+12 -13 -15 0
+9 -11 -14 0
+13 -15 -16 0
+-10 11 -13 0
+-9 13 16 0
+-12 -15 -16 0
+9 -14 15 0
+12 13 16 0
+-9 -10 16 0

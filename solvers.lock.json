@@ -1,0 +1,15 @@
+{
+  "cadical": {
+    "repository": "https://github.com/arminbiere/cadical.git",
+    "version": "3.0.1",
+    "tag": "rel-3.0.1",
+    "commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04"
+  },
+  "kissat": {
+    "repository": "https://github.com/arminbiere/kissat.git",
+    "version": "4.0.4",
+    "tag": "rel-4.0.4",
+    "commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2"
+  }
+}
+

@@ -1,0 +1,42 @@
+# Solver sources and build trees vendored for the locked toolchain.
+third_party/
+tmp/
+__pycache__/
+*.pyc
+
+# 6.4 GB of SATLIB and SAT Competition CNFs. scripts/acquire re-downloads them
+# and phase5/manifests carries the SHA-256 of every file, so the corpus is
+# reproducible without shipping it.
+benchmarks/
+
+# Per-run solver output. The CSV and JSON summaries beside them are what the
+# paper is built from and are tracked; these are the raw stdout dumps.
+results/**/logs/
+results/**/lemmas/
+results/**/witnesses/
+*.log
+*.time
+*.serialized.cnf
+
+# Paper authoring sources and local build tooling. Only the final PDF is public.
+Dockerfile.paper
+scripts/build_paper.ps1
+report/build_paper.py
+report/paper/*.tex
+report/paper/generated/
+
+# LaTeX intermediates. main.pdf is tracked.
+report/paper/*.aux
+report/paper/*.toc
+report/paper/*.lot
+report/paper/*.lof
+report/paper/*.out
+report/paper/*.bbl
+report/paper/*.blg
+report/paper/*.synctex.gz
+
+# Session scratch, not project content.
+.remember/
+# Working notes, not thesis-level material: kept locally, never published.
+RAKIPLER.md
+lkk_hsat_3.0.md

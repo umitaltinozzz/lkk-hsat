@@ -1,0 +1,6 @@
+c Phase 1 harness smoke test: satisfiable
+p cnf 3 3
+1 2 0
+-1 3 0
+-3 2 0
+

@@ -1,0 +1,27 @@
+{
+  "parameters": {
+    "min_boxes": 16,
+    "min_clauses": 100000,
+    "min_signal": 8
+  },
+  "calibration": {
+    "instances": 160,
+    "accuracy": 0.6125,
+    "total_regret_ms": 479780.52292,
+    "mean_regret_ms": 2998.62826825,
+    "harmful_selections": 62,
+    "beneficial_selections": 60,
+    "selector_total_par2_ms": 5551801.9199150065,
+    "oracle_total_par2_ms": 5072021.396995005,
+    "always_cadical_total_par2_ms": 5698024.539181998,
+    "always_kissat_total_par2_ms": 5383158.735141006,
+    "parameters": {
+      "min_boxes": 16,
+      "min_clauses": 100000,
+      "min_signal": 8
+    }
+  },
+  "form": "kissat if (boxes_found >= min_boxes and registry incomplete and gate signal >= min_signal) or clauses >= min_clauses; else cadical",
+  "fitted_on": "calibration split only",
+  "instances": 160
+}

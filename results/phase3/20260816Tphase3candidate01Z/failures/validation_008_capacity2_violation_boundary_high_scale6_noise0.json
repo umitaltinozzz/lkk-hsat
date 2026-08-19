@@ -1,0 +1,25 @@
+{
+  "answers": {
+    "cadical": "TIMEOUT",
+    "kissat": "UNSATISFIABLE",
+    "lkk_hybrid": "UNSATISFIABLE"
+  },
+  "row": {
+    "cadical_log": "results/phase3/20260816Tphase3candidate01Z/logs/validation/008_capacity2_violation_boundary_high_scale6_noise0__cadical.log",
+    "cadical_ms": "30041.418886",
+    "cadical_status": "TIMEOUT",
+    "cadical_timed_out": true,
+    "expected_result": "UNSATISFIABLE",
+    "family": "capacity2_violation",
+    "instance": "008_capacity2_violation_boundary_high_scale6_noise0.cnf",
+    "kissat_log": "results/phase3/20260816Tphase3candidate01Z/logs/validation/008_capacity2_violation_boundary_high_scale6_noise0__kissat.log",
+    "kissat_ms": "2175.990222",
+    "kissat_status": "UNSATISFIABLE",
+    "kissat_timed_out": false,
+    "lkk_hybrid_ms": "1574.359789",
+    "lkk_hybrid_status": "UNSATISFIABLE",
+    "passed": false,
+    "scale": 6,
+    "variant": "boundary_high"
+  }
+}

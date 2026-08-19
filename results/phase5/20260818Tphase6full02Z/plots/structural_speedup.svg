@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" font-family="Helvetica,Arial,sans-serif">
+<rect width="900" height="620" fill="#ffffff"/>
+<text x="450.0" y="28" text-anchor="middle" font-size="17" font-weight="600">Speedup on the structural subset (LKK vs best baseline)</text>
+<text x="450.0" y="602" text-anchor="middle" font-size="13">speedup (x, &gt;1 favours LKK)</text>
+<text x="22" y="310.0" text-anchor="middle" font-size="13" transform="rotate(-90 22 310.0)">instances</text>
+<rect x="90" y="50" width="780" height="500" fill="none" stroke="#c8c8c8"/>
+<rect x="90.0" y="279.2" width="18.5" height="270.8" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="109.5" y="50.0" width="18.5" height="500.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="129.0" y="539.6" width="18.5" height="10.4" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="148.5" y="435.4" width="18.5" height="114.6" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="168.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="187.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="207.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="226.5" y="497.9" width="18.5" height="52.1" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="246.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="265.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="285.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="304.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="324.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="343.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="363.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="382.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="402.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="421.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="441.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="460.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="480.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="499.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="519.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="538.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="558.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="577.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="597.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="616.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="636.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="655.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="675.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="694.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="714.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="733.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="753.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="772.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="792.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="811.5" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="831.0" y="550.0" width="18.5" height="0.0" fill="#1f77b4" fill-opacity="0.75"/>
+<rect x="850.5" y="539.6" width="18.5" height="10.4" fill="#1f77b4" fill-opacity="0.75"/>
+<text x="90.0" y="568" text-anchor="middle" font-size="11">0.19</text>
+<text x="246.0" y="568" text-anchor="middle" font-size="11">3.74</text>
+<text x="402.0" y="568" text-anchor="middle" font-size="11">7.30</text>
+<text x="558.0" y="568" text-anchor="middle" font-size="11">10.85</text>
+<text x="714.0" y="568" text-anchor="middle" font-size="11">14.41</text>
+<text x="870.0" y="568" text-anchor="middle" font-size="11">17.96</text>
+<text x="102" y="70" font-size="12">n=92, median=1.000</text>
+</svg>

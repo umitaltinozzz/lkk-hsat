@@ -1,0 +1,7 @@
+stratum,instances,domains
+lkk_direct_structural_unsat,5,matching_capacity=5
+structural_not_closed_by_flow,9,competition_main=3; matching_capacity=4; planning_scheduling=2
+cardinality_exact_r_heavy,84,competition_main=25; crafted_parity=35; crafted_structured=11; planning_scheduling=13
+resource_allocation_like,872,competition_main=40; crafted_structured=111; eda_circuit_fault=12; eda_formal_verification=2; matching_capacity=300; planning_scheduling=5; random_control=402
+matching_hall_like,27,competition_main=27
+no_useful_detected_structure,195,competition_main=155; crafted_parity=16; eda_formal_verification=11; matching_capacity=4; planning_scheduling=9

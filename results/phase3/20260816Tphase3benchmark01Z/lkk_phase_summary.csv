@@ -1,0 +1,15 @@
+instance,family,scale,variant,runs,completed_runs,timeout_runs,fallback_runs,median_gate_ms,median_benefit_gate_ms,median_recovery_ms,median_registry_ms,median_flow_ms,median_fallback_cdcl_ms,median_total_lkk_hybrid_ms,median_total_lkk_end_to_end_ms
+001_pigeonhole_exact1_boundary_low_scale8_noise0.cnf,pigeonhole_exact1,8,boundary_low,3,3,0,0,1.498468,0.006684,1.214704,40.607896,0.243872,0.000000,78.207071,218.174506
+002_pigeonhole_exact1_boundary_high_scale10_noise0.cnf,pigeonhole_exact1,10,boundary_high,3,3,0,0,2.996959,0.006431,2.376828,122.555043,0.288896,0.000000,169.579234,319.211446
+003_exact_r_allocation_boundary_low_scale9_noise0.cnf,exact_r_allocation,9,boundary_low,3,3,0,0,4.055306,0.013036,2.460018,381.980464,0.213116,0.000000,430.981502,620.619032
+004_exact_r_allocation_boundary_high_scale11_noise0.cnf,exact_r_allocation,11,boundary_high,3,0,3,0,,,,,,,,
+005_overlapping_hall_violation_boundary_low_scale8_noise0.cnf,overlapping_hall_violation,8,boundary_low,3,3,0,3,3.973393,0.010185,3.360041,425.909296,0.000000,519.390583,1002.398966,1170.157586
+006_overlapping_hall_violation_boundary_high_scale9_noise0.cnf,overlapping_hall_violation,9,boundary_high,3,1,2,1,6.283575,0.010623,5.592964,458.466398,0.000000,3481.893542,3976.478132,4134.261056
+007_capacity2_violation_boundary_low_scale5_noise0.cnf,capacity2_violation,5,boundary_low,3,3,0,0,4.268338,0.009820,2.637132,349.060527,0.184672,0.000000,399.534687,520.367669
+008_capacity2_violation_noise100_scale5_noise100.cnf,capacity2_violation,5,noise100,3,3,0,0,11.017367,0.014858,8.242487,458.724429,0.189933,0.000000,560.502454,720.234169
+009_hidden_pigeonhole_visible_noise0_scale9_noise0.cnf,hidden_pigeonhole,9,visible_noise0,3,3,0,0,8.899167,0.015996,14.318976,275.858021,0.242991,0.000000,384.636860,570.702357
+010_hidden_pigeonhole_hidden_noise100_scale9_noise100.cnf,hidden_pigeonhole,9,hidden_noise100,3,3,0,3,13.596419,0.012342,16.022723,136.443946,0.000000,569.472439,787.189063,972.245856
+011_satisfiable_capacity_control_sat_fallback_scale24_noise0.cnf,satisfiable_capacity_control,24,sat_fallback,3,3,0,3,49.440128,0.015558,39.931559,433.474491,0.000000,117.767449,708.560503,870.561130
+012_random_3sat_uniform_scale150_noise0.cnf,random_3sat,150,uniform,3,3,0,3,3.197393,0.005797,1.843247,4.184675,0.000000,117.042380,143.205258,321.557330
+013_random_3sat_planted_sat_scale400_noise0.cnf,random_3sat,400,planted_sat,3,3,0,3,8.450676,0.011835,5.872536,30.990595,0.000000,870.228548,931.699950,1071.745955
+014_random_3sat_planted_sat_scale800_noise0.cnf,random_3sat,800,planted_sat,3,3,0,3,19.122417,0.012835,13.491117,123.929801,0.000000,819.855737,1003.081221,1122.499620
