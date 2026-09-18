@@ -4,6 +4,12 @@
 954 public benchmark instances, changes the score by 0.03 % and does not solve a
 single additional instance.**
 
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)](https://en.cppreference.com/w/c)
+[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](./LICENSE)
+![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=for-the-badge)
+
 That is the headline result, and it took a 24-hour campaign, 4,770 measured runs
 and a control arm to establish it honestly. An earlier reading of the same data
 looked like a win; a control arm showed the win belonged to our DIMACS parser.
@@ -14,12 +20,6 @@ while both locked baselines exhaust a 600-second budget. It fires exactly where
 counting beats resolution, and nowhere else in the public corpus.
 
 This repository is that measurement, including the parts that did not work.
-
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)](https://en.wikipedia.org/wiki/C_(programming_language))
-[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](./LICENSE)
-![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=for-the-badge)
 
 ---
 
