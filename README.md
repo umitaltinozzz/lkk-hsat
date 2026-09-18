@@ -15,6 +15,12 @@ counting beats resolution, and nowhere else in the public corpus.
 
 This repository is that measurement, including the parts that did not work.
 
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](./LICENSE)
+![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=for-the-badge)
+
 ---
 
 ## LKK-HSAT
@@ -137,7 +143,7 @@ the SHA-256 of every file and `phase5/acquire.py` re-downloads it.
 
 ---
 
-## Status — work in progress
+## Project Status — work in progress
 
 Known gaps, to be updated here as they close.
 
@@ -168,3 +174,7 @@ Hall arguments are classical. What is claimed here is narrower: *deciding* the
 recovered structure instead of re-encoding it, and emitting a certificate a
 checker can verify against the original formula. See the paper's related-work
 chapter for the full accounting.
+
+## License
+
+[MIT License](./LICENSE)
